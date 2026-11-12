@@ -75,7 +75,7 @@ Values come from `packages/constants`.
 | Maximum drawdown | 8%, static |
 | Trailing drawdown | 4% from peak, after winning trades; resets to static after a 1% loss |
 | Phases | 1 evaluation + 5 funded |
-| Leverage | Up to 50x, capped per market |
+| Leverage | Up to 50x-200x, capped per market |
 | Position fee | max(starting balance, position size) × 0.035% |
 | Payout | 8% of account size per funded pass, up to 40% in total |
 | Evaluation fee split | 35% protocol wallet, 65% payout vault |
