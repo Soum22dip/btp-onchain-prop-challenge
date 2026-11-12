@@ -1,0 +1,88 @@
+RPC: public devnet
+Program: C3bvX2hkL76wXNobbyJPV5JpEPRFc3ksA4khR8WU9Rnk
+
+== 1. Program ==
+[OK  ] program account exists and is executable
+  last deployed slot: 521162895, binary size: 418648 bytes (incl. padding)
+  upgrade authority: SL89fcsKAuWYtkEJah86WLLBxCiHd1DeNczpsDjSHDJ
+[OK  ] upgrade authority is the protocol wallet
+
+== 2. VaultState ==
+  vault_state PDA:  Ho2fSDux2njBu9wNhkiURsBSSUWcgkSyV38HbYj2xu2v
+  payout_vault PDA: BMHggqxZUgjMEwev5z8YDbFsd6LvTFdZu2SB7B4n7Z1e
+[OK  ] payout vault PDA equals the address used in app constants
+[OK  ] VaultState account exists, owned by program
+  admin:           SL89fcsKAuWYtkEJah86WLLBxCiHd1DeNczpsDjSHDJ
+  protocol_wallet: SL89fcsKAuWYtkEJah86WLLBxCiHd1DeNczpsDjSHDJ
+  payout_vault:    BMHggqxZUgjMEwev5z8YDbFsd6LvTFdZu2SB7B4n7Z1e (bump 250)
+  usdc_mint:       BpkjNnKSRCsNJMAMKtLs1jJCZpcnEh8ZqmMdRZA8QKBC
+  supported mints: 1
+  paused=false  trader_count=6  fee_split_protocol_bps=3500  trader_reserve_bps=2500
+  total_deposited=1,601.00  total_paid_out=14,800.00  admin_total_withdrawn=0.00  queued_payouts=0.00
+  heartbeat: open=false ratio_bps=0 last=1794414767  emergency_requested_at=0
+[OK  ] admin is the protocol wallet
+[OK  ] protocol_wallet is SL89
+[OK  ] stored payout_vault equals derived PDA
+[OK  ] usdc_mint equals test mint
+[OK  ] test mint is in supported mints
+[OK  ] vault not paused, no emergency withdraw pending
+[OK  ] fee split 35% protocol / 25% reserve
+
+== 3. Mint and payout vault ==
+[OK  ] mint exists, owned by SPL Token program
+  decimals=6  supply=211,267.00  mint authority=SL89fcsKAuWYtkEJah86WLLBxCiHd1DeNczpsDjSHDJ
+[OK  ] mint has 6 decimals
+  vault token account (ATA of the PDA): 5sE1nc3CKuE4cLYAuT2Ltkps5vivPrrG94SkwnAfnEVF
+[OK  ] payout vault token account exists  balance 186,240.65 USDC
+  accounting: deposited - paid_out - admin_withdrawn = -13,199.00  vs  token balance 186,240.65
+  (they differ if tokens were sent straight to the vault ATA, or if admin_deposit is not counted in total_deposited; informational)
+[OK  ] vault balance covers queued payouts  queued 0.00
+
+== 4. Wallet balances ==
+  protocol SL89: 7.6806 SOL, 560.35 test USDC
+  demo trader: 0.2988 SOL, 9,666.00 test USDC
+[OK  ] protocol wallet has SOL for fees (>= 0.5)  7.681 SOL
+
+== 5. TraderAccount for demo wallet ==
+  PDA: CttztidSQsv4aaAcTh64aAd1i9EVyXyzp3XFXJbd81Xv
+  wallet=2CRtrRwLFsrpnBas5z3Hx9gCuuESWZfscE5L2QzK1TYK phase=Evaluation status=Active
+  account_size=25,000.00 total_deposited=334.00 total_paid_out=0.00 passed=0 failed=1 created=2026-11-09T13:52:16.000Z
+[OK  ] trader account wallet matches
+
+== 6. Recent transactions (program-level, newest first) ==
+  ok      2026-11-11T16:32:59.000Z  45tYuPprQgKGibYSGicH...4hNK98
+  ok      2026-11-11T16:32:56.000Z  5iiANUPkmEraJrTzYUJg...4gCDM6
+  ok      2026-11-11T16:32:54.000Z  3BbHs7VLSKbvR7cdhege...ea6cWB
+  ok      2026-11-11T16:32:52.000Z  2Es683Cw6e7L1LYPUxAm...X8gBHx
+  ok      2026-11-11T16:32:50.000Z  2qMAox22pXTbADrSsTFM...ATLVmb
+  ok      2026-11-11T16:32:47.000Z  E5R6AaWD9TLRJjKvtD3R...meV1YG
+  ok      2026-11-11T16:29:52.000Z  3V3AeidH7CZMcKYXYUGR...pSL4qS
+  ok      2026-11-11T16:09:38.000Z  2LY9dHk1NPeVzSxPQKPx...JFCuv5
+  ok      2026-11-11T16:09:36.000Z  Gx63Dfr4eZnkNRD38Me8...c2oisH
+  ok      2026-11-11T16:09:28.000Z  5wcJsd6mxVYFv2wJWyKJ...eisEbz
+  ok      2026-11-11T16:09:26.000Z  5aPyC88ieCRUktpUjDh4...ivKzyD
+  ok      2026-11-11T16:09:12.000Z  4ysShAPpP2Sd1TQehBNH...YHxD9L
+  ok      2026-11-11T16:09:08.000Z  4Fce4ATd7KNgXFXRS1DJ...BCbrMX
+  ok      2026-11-11T16:08:55.000Z  4H7VH2QviCAt2cuUMzQM...2hUfxY
+  ok      2026-11-11T16:08:49.000Z  3MBszZDox5tgXWyFvo9R...FJBukZ
+  ok      2026-11-11T16:08:37.000Z  2SXWj6Ru64tu2YD849gX...XGyMmB
+  ok      2026-11-11T16:08:34.000Z  4LujgWcmgVjJDTbm7Q1m...fq5UNY
+  ok      2026-11-11T16:08:33.000Z  5E7vq1K8ZiaRWgZRD5og...AgArsU
+  ok      2026-11-11T16:08:21.000Z  iKfwZLxs3WC15rjFiMXo...stsS5R
+  ok      2026-11-11T16:08:19.000Z  2xgzeXoZfMA33qnrRFUk...HxfpZL
+  ok      2026-11-11T16:08:16.000Z  4f5ZzFgc5HSeJDCuKzP8...PrKMK6
+  ok      2026-11-09T14:26:37.000Z  3F5Ea5VGGRo3wVch6wv5...JNvG1q
+  ok      2026-11-09T14:25:51.000Z  3SAHp3phctdC249o5hkZ...McgQu4
+  ok      2026-11-09T13:52:17.000Z  5s5jzB3pYjMKXWB4fRQN...eCAgmX
+  ok      2026-11-09T13:24:20.000Z  KNe92dZYYBDC1EbbUq51...WHTCGb
+  25 shown, 0 failed
+Server responded with 429 Too Many Requests.  Retrying after 500ms delay...
+Server responded with 429 Too Many Requests.  Retrying after 1000ms delay...
+Server responded with 429 Too Many Requests.  Retrying after 2000ms delay...
+Server responded with 429 Too Many Requests.  Retrying after 4000ms delay...
+Server responded with 429 Too Many Requests.  Retrying after 500ms delay...
+Server responded with 429 Too Many Requests.  Retrying after 1000ms delay...
+  instruction mix (last 12 successful): ProcessHeartbeatClosex1, ProcessPayoutx4, ProcessHeartbeatOpenx1, unknownx1, SubmitResultNoPayoutx2, DepositEvaluationFeex2, SubmitResultWithPayoutx1
+
+== Summary ==
+17/17 checks passed

@@ -1,0 +1,270 @@
+Vault state PDA: Ho2fSDux2njBu9wNhkiURsBSSUWcgkSyV38HbYj2xu2v
+Payout vault PDA: BMHggqxZUgjMEwev5z8YDbFsd6LvTFdZu2SB7B4n7Z1e
+
+32 transactions (oldest first)
+
+#1 ok  2026-11-09T13:22:02.000Z  slot 520395371
+   sig:      JopwFeKreQ3usA4BtH9n9F1cAKhgr9mfdjnXEf1ANfw26RtHi8411hGnT3tzmZbeTLbvwztJgdrcWQgcVvEjx6b
+   explorer: https://explorer.solana.com/tx/JopwFeKreQ3usA4BtH9n9F1cAKhgr9mfdjnXEf1ANfw26RtHi8411hGnT3tzmZbeTLbvwztJgdrcWQgcVvEjx6b?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.00001 SOL
+   programs: system, bpf-upgradeable-loader   instructions: (no anchor/spl log)
+
+#2 ok  2026-11-09T13:24:14.000Z  slot 520395928
+   sig:      2xeorBxBiKFMgwL23awC1MobB5J5Wb59kM2RSXHvPZXPTVv8knEbuyWv8BcakBZeeokNFkYEhtLzqxZ7oJd3Zbnt
+   explorer: https://explorer.solana.com/tx/2xeorBxBiKFMgwL23awC1MobB5J5Wb59kM2RSXHvPZXPTVv8knEbuyWv8BcakBZeeokNFkYEhtLzqxZ7oJd3Zbnt?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.000005 SOL
+   programs: setl8-vault   instructions: Initialize
+
+#3 ok  2026-11-09T13:24:16.000Z  slot 520395933
+   sig:      22MX4pCR7esyvc7S626yAUQtfThSoRQVdy3ZUGGJpWdMUztGhRomsfbNLqfrPDxQcgjpA6Gf1Z4UyhoMg9dsvD51
+   explorer: https://explorer.solana.com/tx/22MX4pCR7esyvc7S626yAUQtfThSoRQVdy3ZUGGJpWdMUztGhRomsfbNLqfrPDxQcgjpA6Gf1Z4UyhoMg9dsvD51?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.000005 SOL
+   programs: ata   instructions: (no anchor/spl log)
+
+#4 ok  2026-11-09T13:24:20.000Z  slot 520395950
+   sig:      KNe92dZYYBDC1EbbUq51pQt719etkNXH4yhBt5bKztG7GMKp9akzqac1zGUW6ZGfm7o17UoKuZWYWwNqtWHTCGb
+   explorer: https://explorer.solana.com/tx/KNe92dZYYBDC1EbbUq51pQt719etkNXH4yhBt5bKztG7GMKp9akzqac1zGUW6ZGfm7o17UoKuZWYWwNqtWHTCGb?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.000005 SOL
+   programs: setl8-vault   instructions: AdminDeposit
+   token: vaultPDA         USDC   +100,000.00
+   token: protocol(SL89)   USDC   -100,000.00
+
+#5 ok  2026-11-09T13:52:17.000Z  slot 520402962
+   sig:      5s5jzB3pYjMKXWB4fRQNYiJ1yJjdrguR7ahz2sGozRkWst2KXZyErVsMTizZbjdfTdrJwdT96LVfmLQ91reCAgmX
+   explorer: https://explorer.solana.com/tx/5s5jzB3pYjMKXWB4fRQNYiJ1yJjdrguR7ahz2sGozRkWst2KXZyErVsMTizZbjdfTdrJwdT96LVfmLQ91reCAgmX?cluster=devnet
+   signer/fee payer: trader  fee 0.00008 SOL
+   programs: compute-budget, setl8-vault   instructions: DepositEvaluationFee
+   token: trader           USDC   -99.00
+   token: vaultPDA         USDC   +64.35
+   token: protocol(SL89)   USDC   +34.65
+
+#6 ok  2026-11-09T14:25:51.000Z  slot 520411368
+   sig:      3SAHp3phctdC249o5hkZiuAPTrG8PgRR6eY5npZQp8FbwViYuRw6fGGS3km61E8Dd1Qy55WpWSH8rkFrCGMcgQu4
+   explorer: https://explorer.solana.com/tx/3SAHp3phctdC249o5hkZiuAPTrG8PgRR6eY5npZQp8FbwViYuRw6fGGS3km61E8Dd1Qy55WpWSH8rkFrCGMcgQu4?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.000005 SOL
+   programs: setl8-vault   instructions: SubmitResultNoPayout
+
+#7 ok  2026-11-09T14:26:37.000Z  slot 520411562
+   sig:      3F5Ea5VGGRo3wVch6wv55Vy2PqUG2SvumoUks4ZKTYPPdpnDrtDRJFiD9AGS7i5aY3jBt1D69RmAxxAciMJNvG1q
+   explorer: https://explorer.solana.com/tx/3F5Ea5VGGRo3wVch6wv55Vy2PqUG2SvumoUks4ZKTYPPdpnDrtDRJFiD9AGS7i5aY3jBt1D69RmAxxAciMJNvG1q?cluster=devnet
+   signer/fee payer: trader  fee 0.00008 SOL
+   programs: compute-budget, setl8-vault   instructions: DepositEvaluationFee
+   token: trader           USDC   -235.00
+   token: vaultPDA         USDC   +152.75
+   token: protocol(SL89)   USDC   +82.25
+
+#8 ok  2026-11-09T15:06:18.000Z  slot 520421520
+   sig:      2GmCTw26ZfubdxKYo1ARowrJjLnYgFX8JvMYSZkRCkcVgc7stJHa6KUU7zqVoewP58tDNmEAgpgi3KPkBZ4qNX3y
+   explorer: https://explorer.solana.com/tx/2GmCTw26ZfubdxKYo1ARowrJjLnYgFX8JvMYSZkRCkcVgc7stJHa6KUU7zqVoewP58tDNmEAgpgi3KPkBZ4qNX3y?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.000005 SOL
+   programs: spl-token   instructions: (no anchor/spl log)
+   token: vaultPDA         USDC   +100,000.00
+
+#9 ok  2026-11-09T15:06:19.000Z  slot 520421528
+   sig:      HFj4Z6sc82ZcSsffhqjydvTox29pKnjj1bkjTHKehnyx32DVHTZinkniG9MqAxtKGSJdijGviHAniJwn18BBveZ
+   explorer: https://explorer.solana.com/tx/HFj4Z6sc82ZcSsffhqjydvTox29pKnjj1bkjTHKehnyx32DVHTZinkniG9MqAxtKGSJdijGviHAniJwn18BBveZ?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.000005 SOL
+   programs: ata   instructions: (no anchor/spl log)
+
+#10 ok  2026-11-09T15:06:20.000Z  slot 520421532
+   sig:      43sdjECFbahk94EP3Ukv97UrTFZFthZg2gxDcG96iZCkujHwzkr8kGSLDVGDgXDyJkwkzuCEMKaaFRBBrxYLj97e
+   explorer: https://explorer.solana.com/tx/43sdjECFbahk94EP3Ukv97UrTFZFthZg2gxDcG96iZCkujHwzkr8kGSLDVGDgXDyJkwkzuCEMKaaFRBBrxYLj97e?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.000005 SOL
+   programs: spl-token   instructions: (no anchor/spl log)
+   token: vaultPDA         USDT   +100,000.00
+
+#11 ok  2026-11-11T16:08:16.000Z  slot 521157488
+   sig:      4f5ZzFgc5HSeJDCuKzP8VyzEZZ1sQFqogw35oRMNEkE2S3s1jkhqK2qXbWf3PGYRPXmM7hSA9PJsAQ7EEVPrKMK6
+   explorer: https://explorer.solana.com/tx/4f5ZzFgc5HSeJDCuKzP8VyzEZZ1sQFqogw35oRMNEkE2S3s1jkhqK2qXbWf3PGYRPXmM7hSA9PJsAQ7EEVPrKMK6?cluster=devnet
+   signer/fee payer: demo-trader-1  fee 0.000005 SOL
+   programs: setl8-vault   instructions: DepositEvaluationFee
+   token: vaultPDA         USDC   +64.35
+   token: demo-trader-1    USDC   -99.00
+   token: protocol(SL89)   USDC   +34.65
+
+#12 ok  2026-11-11T16:08:19.000Z  slot 521157500
+   sig:      2xgzeXoZfMA33qnrRFUkqAbLcztw1M3gbJ9erzTWK7io5B2SFrW2zFtndNASaC7mh4YMxMDvzwsuWC4JBYHxfpZL
+   explorer: https://explorer.solana.com/tx/2xgzeXoZfMA33qnrRFUkqAbLcztw1M3gbJ9erzTWK7io5B2SFrW2zFtndNASaC7mh4YMxMDvzwsuWC4JBYHxfpZL?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.000005 SOL
+   programs: setl8-vault   instructions: SubmitResultNoPayout
+
+#13 ok  2026-11-11T16:08:21.000Z  slot 521157511
+   sig:      iKfwZLxs3WC15rjFiMXofpysMffvkTucsE6K2m8EpFUHGKuGyXQiQ48kNvuo6C4whoT559YYmu89jDz9estsS5R
+   explorer: https://explorer.solana.com/tx/iKfwZLxs3WC15rjFiMXofpysMffvkTucsE6K2m8EpFUHGKuGyXQiQ48kNvuo6C4whoT559YYmu89jDz9estsS5R?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.000005 SOL
+   programs: setl8-vault   instructions: SubmitResultWithPayout
+
+#14 ok  2026-11-11T16:08:33.000Z  slot 521157557
+   sig:      5E7vq1K8ZiaRWgZRD5ogverCY9Xupr7b4pU13PZ4SiVpqNxyn97xYht4QWNNSHUiQSUEXZfQs4bmvfmQnUAgArsU
+   explorer: https://explorer.solana.com/tx/5E7vq1K8ZiaRWgZRD5ogverCY9Xupr7b4pU13PZ4SiVpqNxyn97xYht4QWNNSHUiQSUEXZfQs4bmvfmQnUAgArsU?cluster=devnet
+   signer/fee payer: demo-trader-2  fee 0.000005 SOL
+   programs: setl8-vault   instructions: DepositEvaluationFee
+   token: vaultPDA         USDC   +152.75
+   token: protocol(SL89)   USDC   +82.25
+   token: demo-trader-2    USDC   -235.00
+
+#15 ok  2026-11-11T16:08:34.000Z  slot 521157565
+   sig:      4LujgWcmgVjJDTbm7Q1mfG2qfDKFe5aQmKwhiKxziKzRG8jrt9YxLxncmUdZ9pLuwZKYfPQktJeuWFgTN7fq5UNY
+   explorer: https://explorer.solana.com/tx/4LujgWcmgVjJDTbm7Q1mfG2qfDKFe5aQmKwhiKxziKzRG8jrt9YxLxncmUdZ9pLuwZKYfPQktJeuWFgTN7fq5UNY?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.000005 SOL
+   programs: setl8-vault   instructions: SubmitResultNoPayout
+
+#16 ok  2026-11-11T16:08:37.000Z  slot 521157577
+   sig:      2SXWj6Ru64tu2YD849gXYcoV1pUmmaiZz8s8mKbYkuLvCYTfHTs8yeDYpJuhQ8guRTm772oUEFg8Uro63pXGyMmB
+   explorer: https://explorer.solana.com/tx/2SXWj6Ru64tu2YD849gXYcoV1pUmmaiZz8s8mKbYkuLvCYTfHTs8yeDYpJuhQ8guRTm772oUEFg8Uro63pXGyMmB?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.000005 SOL
+   programs: setl8-vault   instructions: SubmitResultWithPayout
+
+#17 ok  2026-11-11T16:08:49.000Z  slot 521157624
+   sig:      3MBszZDox5tgXWyFvo9RLMwYLn6w55SWqCaBknJRLDBuxyTDuZeUJSAor84n5kNz6AQ1U4JDJNxLZAKiLyFJBukZ
+   explorer: https://explorer.solana.com/tx/3MBszZDox5tgXWyFvo9RLMwYLn6w55SWqCaBknJRLDBuxyTDuZeUJSAor84n5kNz6AQ1U4JDJNxLZAKiLyFJBukZ?cluster=devnet
+   signer/fee payer: demo-trader-3  fee 0.000005 SOL
+   programs: setl8-vault   instructions: DepositEvaluationFee
+   token: vaultPDA         USDC   +389.35
+   token: protocol(SL89)   USDC   +209.65
+   token: demo-trader-3    USDC   -599.00
+
+#18 ok  2026-11-11T16:08:55.000Z  slot 521157649
+   sig:      4H7VH2QviCAt2cuUMzQMQohtGJhc9Nmh1g6kQPkdXawxe9Biv7tqdeGnBx2xWW6Wvk1Tsqp8BAfTeDSMhp2hUfxY
+   explorer: https://explorer.solana.com/tx/4H7VH2QviCAt2cuUMzQMQohtGJhc9Nmh1g6kQPkdXawxe9Biv7tqdeGnBx2xWW6Wvk1Tsqp8BAfTeDSMhp2hUfxY?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.000005 SOL
+   programs: setl8-vault   instructions: SubmitResultNoPayout
+
+#19 ok  2026-11-11T16:09:08.000Z  slot 521157706
+   sig:      4Fce4ATd7KNgXFXRS1DJLRwdAveeoTPCd9aSA74ELc7oETSqj5itF2jEt91Z3zdjT5ERLpE6NiCVQ12NGcBCbrMX
+   explorer: https://explorer.solana.com/tx/4Fce4ATd7KNgXFXRS1DJLRwdAveeoTPCd9aSA74ELc7oETSqj5itF2jEt91Z3zdjT5ERLpE6NiCVQ12NGcBCbrMX?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.000005 SOL
+   programs: setl8-vault   instructions: SubmitResultWithPayout
+
+#20 ok  2026-11-11T16:09:12.000Z  slot 521157720
+   sig:      4ysShAPpP2Sd1TQehBNHvwKqcGU2qegzzadtbb1YV9EK72w1qbyrUp6YiKMsrpqDXBHL5qe7Tnm56f6ayfYHxD9L
+   explorer: https://explorer.solana.com/tx/4ysShAPpP2Sd1TQehBNHvwKqcGU2qegzzadtbb1YV9EK72w1qbyrUp6YiKMsrpqDXBHL5qe7Tnm56f6ayfYHxD9L?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.000005 SOL
+   programs: setl8-vault   instructions: SubmitResultWithPayout
+
+#21 ok  2026-11-11T16:09:26.000Z  slot 521157780
+   sig:      5aPyC88ieCRUktpUjDh4aq6LJmwkE4V5UHavVXmh5WyzBmFfHNmihkj93VGC3WucZvQQ1BNfrDvkhqpYjsivKzyD
+   explorer: https://explorer.solana.com/tx/5aPyC88ieCRUktpUjDh4aq6LJmwkE4V5UHavVXmh5WyzBmFfHNmihkj93VGC3WucZvQQ1BNfrDvkhqpYjsivKzyD?cluster=devnet
+   signer/fee payer: demo-trader-4  fee 0.000005 SOL
+   programs: setl8-vault   instructions: DepositEvaluationFee
+   token: vaultPDA         USDC   +64.35
+   token: protocol(SL89)   USDC   +34.65
+   token: demo-trader-4    USDC   -99.00
+
+#22 ok  2026-11-11T16:09:28.000Z  slot 521157788
+   sig:      5wcJsd6mxVYFv2wJWyKJ5XD9ieHKuqUSUL7ZQ84jGMK7rY7rdpunbk2r8QeFWD8crwAnJn7tg2hqNCAq9UeisEbz
+   explorer: https://explorer.solana.com/tx/5wcJsd6mxVYFv2wJWyKJ5XD9ieHKuqUSUL7ZQ84jGMK7rY7rdpunbk2r8QeFWD8crwAnJn7tg2hqNCAq9UeisEbz?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.000005 SOL
+   programs: setl8-vault   instructions: SubmitResultNoPayout
+
+#23 ok  2026-11-11T16:09:36.000Z  slot 521157822
+   sig:      Gx63Dfr4eZnkNRD38Me8zYFpr2LttDTm8wKdoMhaTycTZ4egyTL5JGRQdJagALfM2MgvEtMPie8aWgz8rc2oisH
+   explorer: https://explorer.solana.com/tx/Gx63Dfr4eZnkNRD38Me8zYFpr2LttDTm8wKdoMhaTycTZ4egyTL5JGRQdJagALfM2MgvEtMPie8aWgz8rc2oisH?cluster=devnet
+   signer/fee payer: demo-trader-5  fee 0.000005 SOL
+   programs: setl8-vault   instructions: DepositEvaluationFee
+   token: vaultPDA         USDC   +152.75
+   token: demo-trader-5    USDC   -235.00
+   token: protocol(SL89)   USDC   +82.25
+
+#24 ok  2026-11-11T16:09:38.000Z  slot 521157830
+   sig:      2LY9dHk1NPeVzSxPQKPxXNJk5cykVfrPx7vE4RzQyJXFG5MkPpFuta4Hnx7Z21RfbJLo7w42ccDwPLwrc1JFCuv5
+   explorer: https://explorer.solana.com/tx/2LY9dHk1NPeVzSxPQKPxXNJk5cykVfrPx7vE4RzQyJXFG5MkPpFuta4Hnx7Z21RfbJLo7w42ccDwPLwrc1JFCuv5?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.000005 SOL
+   programs: setl8-vault   instructions: SubmitResultNoPayout
+
+#25 ok  2026-11-11T16:29:52.000Z  slot 521162895
+   sig:      3V3AeidH7CZMcKYXYUGRmCnh9Yxx1ha14p7emZB2HyBgZrV1PkQhjjL2bcCmGV1x1A9yvGF1WMTQcDQJnJpSL4qS
+   explorer: https://explorer.solana.com/tx/3V3AeidH7CZMcKYXYUGRmCnh9Yxx1ha14p7emZB2HyBgZrV1PkQhjjL2bcCmGV1x1A9yvGF1WMTQcDQJnJpSL4qS?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.000005 SOL
+   programs: bpf-upgradeable-loader   instructions: (no anchor/spl log)
+
+#26 ok  2026-11-11T16:32:47.000Z  slot 521163626
+   sig:      E5R6AaWD9TLRJjKvtD3RorKc8UQ6kckMZivMu9BenGoA4Nr8sqiBhLRU9Si7extqLN2iYaye4vcx6hMz6meV1YG
+   explorer: https://explorer.solana.com/tx/E5R6AaWD9TLRJjKvtD3RorKc8UQ6kckMZivMu9BenGoA4Nr8sqiBhLRU9Si7extqLN2iYaye4vcx6hMz6meV1YG?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.000005 SOL
+   programs: setl8-vault   instructions: ProcessHeartbeatOpen
+
+#27 ok  2026-11-11T16:32:50.000Z  slot 521163637
+   sig:      2qMAox22pXTbADrSsTFMPjmiaNhKMfZG5wNKZJBZ7GNzhG75vzSyUPqL9Fb4fqqnRFmGVohnemkpmX3ioUATLVmb
+   explorer: https://explorer.solana.com/tx/2qMAox22pXTbADrSsTFMPjmiaNhKMfZG5wNKZJBZ7GNzhG75vzSyUPqL9Fb4fqqnRFmGVohnemkpmX3ioUATLVmb?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.000005 SOL
+   programs: setl8-vault   instructions: ProcessPayout
+   token: vaultPDA         USDC   -800.00
+   token: demo-trader-1    USDC   +800.00
+
+#28 ok  2026-11-11T16:32:52.000Z  slot 521163645
+   sig:      2Es683Cw6e7L1LYPUxAmTPErmMuR8HKpbaTFAaCzFuJGQKm3dmbvG2ycbuVsbsNHYbNJABCHR4AeeqmS9sX8gBHx
+   explorer: https://explorer.solana.com/tx/2Es683Cw6e7L1LYPUxAmTPErmMuR8HKpbaTFAaCzFuJGQKm3dmbvG2ycbuVsbsNHYbNJABCHR4AeeqmS9sX8gBHx?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.000005 SOL
+   programs: setl8-vault   instructions: ProcessPayout
+   token: vaultPDA         USDC   -2,000.00
+   token: demo-trader-2    USDC   +2,000.00
+
+#29 ok  2026-11-11T16:32:54.000Z  slot 521163653
+   sig:      3BbHs7VLSKbvR7cdhegevhqwbjyqr3wSxzTzuLXXEMA3DTPosXJaqG9d3pxUWy85jwymQvVPbQ5zYys7YRea6cWB
+   explorer: https://explorer.solana.com/tx/3BbHs7VLSKbvR7cdhegevhqwbjyqr3wSxzTzuLXXEMA3DTPosXJaqG9d3pxUWy85jwymQvVPbQ5zYys7YRea6cWB?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.000005 SOL
+   programs: setl8-vault   instructions: ProcessPayout
+   token: vaultPDA         USDC   -6,000.00
+   token: demo-trader-3    USDC   +6,000.00
+
+#30 ok  2026-11-11T16:32:56.000Z  slot 521163664
+   sig:      5iiANUPkmEraJrTzYUJgdrHiF6Dnf8UYphdFBuz7z4WUEz1Hqe6k3TjLDrLxs9GMpBm2URMYN3HLbVa1KY4gCDM6
+   explorer: https://explorer.solana.com/tx/5iiANUPkmEraJrTzYUJgdrHiF6Dnf8UYphdFBuz7z4WUEz1Hqe6k3TjLDrLxs9GMpBm2URMYN3HLbVa1KY4gCDM6?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.000005 SOL
+   programs: setl8-vault   instructions: ProcessPayout
+   token: vaultPDA         USDC   -6,000.00
+   token: demo-trader-3    USDC   +6,000.00
+
+#31 ok  2026-11-11T16:32:59.000Z  slot 521163676
+   sig:      45tYuPprQgKGibYSGicHgLXUywdeNKqdhE6mBNEYHcXkFCetWN6QL4hGa7VTRAL344mx7xtAKCnzu8DDvj4hNK98
+   explorer: https://explorer.solana.com/tx/45tYuPprQgKGibYSGicHgLXUywdeNKqdhE6mBNEYHcXkFCetWN6QL4hGa7VTRAL344mx7xtAKCnzu8DDvj4hNK98?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.000005 SOL
+   programs: setl8-vault   instructions: ProcessHeartbeatClose
+
+#32 ok  2026-11-11T16:35:17.000Z  slot 521164250
+   sig:      57fsFDkmDvXuHNNCDeg6gyWNE6U5xxGNmMM9x1Fmk1Q4DDLd163Ln9mQPrkMx3bCKCy1HRbakPRJFLqty5weXvfv
+   explorer: https://explorer.solana.com/tx/57fsFDkmDvXuHNNCDeg6gyWNE6U5xxGNmMM9x1Fmk1Q4DDLd163Ln9mQPrkMx3bCKCy1HRbakPRJFLqty5weXvfv?cluster=devnet
+   signer/fee payer: protocol(SL89)  fee 0.000005 SOL
+   programs: bpf-upgradeable-loader   instructions: (no anchor/spl log)
+
+== PhaseResult records (permanent on-chain results) ==
+  trader(arg) (2CRtrR..) phase 0  FAILED  PDA 9vmXC1RYL4eDQnXpqacwVZ3yopQSJfA59sXkxTVssU2P
+    account=10,000.00 start=10,000.00 end=9,038.716 pnl=-961.284 peak=10,000.00 payout=0.00 trades=5 wins=0 dd=961bps static at=2026-11-09T14:25:50.000Z
+    result_hash=85e71c02040aefb5d6a49741c7cc59838c8ba39b86ae9d1e1db1ea7c20a60b6d
+  demo-trader-1 (HenwTh..) phase 0  PASSED  PDA GxQ6B2HZ6PSgyuY3F5LcGF5SGxqsWtie59RjR1GMobGE
+    account=10,000.00 start=10,000.00 end=11,106.00 pnl=1,106.00 peak=11,106.00 payout=0.00 trades=20 wins=12 dd=248bps static at=2026-11-11T16:08:18.000Z
+    result_hash=fed5ede0ec4395cdb870423f3c1660325e62c37136c928ba43fc86181e34216e
+  demo-trader-1 (HenwTh..) phase 1  PASSED  PDA 4Qwdow96ThBWuBMubPxL45jk1uUxNcYqsW3Ywd5xGaKr
+    account=10,000.00 start=10,000.00 end=10,917.00 pnl=917.00 peak=10,917.00 payout=800.00 trades=18 wins=11 dd=371bps trailing at=2026-11-11T16:08:21.000Z
+    result_hash=a5e971ee8d4e4995bb67e40e77434cb8f6340c916335b38a96c1f5b15ec91648
+  demo-trader-2 (4gnTQG..) phase 0  PASSED  PDA CZRzBvMJBD8QeybQjxcMpSgsbhrAWMuaWoxbqGKf1YKo
+    account=25,000.00 start=25,000.00 end=27,662.50 pnl=2,662.50 peak=27,662.50 payout=0.00 trades=21 wins=13 dd=305bps static at=2026-11-11T16:08:34.000Z
+    result_hash=19d6f3f16a0ef66866f8037a062c6380c3239b5199e190543e669338430593a5
+  demo-trader-2 (4gnTQG..) phase 1  PASSED  PDA GDWcmdMzJc4dQ9DHQFPg1p3C5uJGye1DjSRXAn9bD1uh
+    account=25,000.00 start=25,000.00 end=27,190.00 pnl=2,190.00 peak=27,190.00 payout=2,000.00 trades=19 wins=11 dd=198bps trailing at=2026-11-11T16:08:37.000Z
+    result_hash=cd4c9333ce7f80534efcef0cc33aa30f3cbf25c37f2ed898a8433f99bd6e4b11
+  demo-trader-3 (Ci6EjY..) phase 0  PASSED  PDA ArfjV68o6BBLorW6Jhi7ezfRvwpqGVC5EE5oFKnShgsZ
+    account=75,000.00 start=75,000.00 end=82,680.00 pnl=7,680.00 peak=82,680.00 payout=0.00 trades=22 wins=13 dd=362bps static at=2026-11-11T16:08:54.000Z
+    result_hash=0f2c3d0e729df02af9f1067e8cf85ce3aad6041def7848ab590d79d195ff4178
+  demo-trader-3 (Ci6EjY..) phase 1  PASSED  PDA HqzNcg1SPDrmqWeJiVjdgd6717J75Vgvpi4bLZSUbEVK
+    account=75,000.00 start=75,000.00 end=81,262.50 pnl=6,262.50 peak=81,262.50 payout=6,000.00 trades=20 wins=13 dd=255bps trailing at=2026-11-11T16:09:08.000Z
+    result_hash=cb2a089b2f150b76942f906be26693a9ccf3a190236f5e13fabcf74ab350f609
+  demo-trader-3 (Ci6EjY..) phase 2  PASSED  PDA F2HzxxtoR75GDj45aGWWpLPQ5Gb9tTNJsPzDmmtCaiiw
+    account=75,000.00 start=75,000.00 end=82,095.00 pnl=7,095.00 peak=82,095.00 payout=6,000.00 trades=18 wins=10 dd=378bps trailing at=2026-11-11T16:09:11.000Z
+    result_hash=25e0bf166ccaa94cc9d8c96f88a5144830432b647ccf6228b49bf3deb3011778
+  demo-trader-4 (DdKvkq..) phase 0  FAILED  PDA 3pYcxaMhgTWU9MAQ52n6taSrdwxJQJthqdprHK2DFadh
+    account=10,000.00 start=10,000.00 end=9,189.00 pnl=-811.00 peak=10,000.00 payout=0.00 trades=12 wins=2 dd=823bps static at=2026-11-11T16:09:28.000Z
+    result_hash=474f2f9c0f6b10e0f6bfc54ccaae36549e8514eca636fb7af329c7e6c91dfc41
+  demo-trader-5 (BPT5N3..) phase 0  PASSED  PDA 6NNG9LCSTA6nUbqFyrvbsPAByzUunMZKX4mV7Y9QL3Lg
+    account=25,000.00 start=25,000.00 end=27,355.00 pnl=2,355.00 peak=27,355.00 payout=0.00 trades=24 wins=14 dd=246bps static at=2026-11-11T16:09:38.000Z
+    result_hash=76f2468074606fc0b0de87ee30d6167c2a0553f63073365cf8266164f5b7db54
+
+== PayoutRequest records ==
+  demo-trader-1 phase 1: Completed  amount=800.00 paid=800.00  PDA CruvcSVaGomsBXnygM9aoJiY6pBaSWHKBwmDysckFTo4
+  demo-trader-2 phase 1: Completed  amount=2,000.00 paid=2,000.00  PDA HmCjBEwaLvr82LoWYSxhwCrQzq7Kve6xsuwpQWANfoa5
+  demo-trader-3 phase 1: Completed  amount=6,000.00 paid=6,000.00  PDA DeXhUHJtJWDhgt4GdirU9cgjHC25u1CvECmEL15yMbnb
+  demo-trader-3 phase 2: Completed  amount=6,000.00 paid=6,000.00  PDA GnrtQKdyQny5bDgEJbmv2pE3G6UqLM6tWgXY2fcT1FNy
+  total queued/paid: 14,800.00 / 14,800.00 USDC
+
+Done. Open the explorer links above and compare signer, programs and token deltas with this ledger.

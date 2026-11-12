@@ -1,0 +1,33 @@
+[package]
+edition = "2021"
+name = "indexmap"
+version = "2.13.0"
+description = "A hash table with consistent order and fast iteration."
+license = "Apache-2.0 OR MIT"
+
+[features]
+default = ["std"]
+std = []
+
+[lib]
+name = "indexmap"
+path = "src/lib.rs"
+bench = false
+
+[dependencies.equivalent]
+version = "1.0"
+default-features = false
+
+[dependencies.hashbrown]
+version = "0.16.1"
+default-features = false
+
+[dependencies.serde_core]
+version = "1.0.220"
+optional = true
+default-features = false
+
+[target."cfg(any())".dependencies.serde]
+version = "1.0.220"
+optional = true
+default-features = false

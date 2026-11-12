@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #08080F;
+  --foreground: #ffffff;
+}
+
+body {
+  background: #08080F;
+  color: #ffffff;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Wallet adapter overrides — glass theme */
+.wallet-adapter-button {
+  background-color: #7C3AED !important;
+  border-radius: 8px !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 14px !important;
+  height: 36px !important;
+  padding: 0 16px !important;
+}
+
+.wallet-adapter-button:hover {
+  background-color: #6D28D9 !important;
+}
+
+/* Override Solana wallet adapter modal */
+.wallet-adapter-modal-wrapper {
+  background: rgba(8, 8, 15, 0.98) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 20px !important;
+}
+
+.wallet-adapter-modal-title {
+  color: #ffffff !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+}
+
+.wallet-adapter-modal-list li {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 12px !important;
+  margin-bottom: 8px !important;
+}
+
+.wallet-adapter-modal-list li:hover {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(124, 58, 237, 0.4) !important;
+}
+
+.wallet-adapter-modal-list-more {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.wallet-adapter-button-trigger {
+  background: #7C3AED !important;
+  border-radius: 10px !important;
+}
+
+.wallet-adapter-modal-button-close {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.wallet-adapter-modal-button-close:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Custom scrollbar — minimal */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Tabular number font */
+.number-font {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Font mono should always use tabular nums */
+.font-mono {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Wallet modal slide-up animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Smooth range slider styling */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  height: 20px;
+}
+
+input[type='range']::-webkit-slider-track {
+  height: 3px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 2px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: #7C3AED;
+  border-radius: 50%;
+  margin-top: -5.5px;
+  border: 2px solid #08080F;
+  box-shadow: 0 0 4px rgba(124, 58, 237, 0.3);
+}
+
+input[type='range']::-moz-range-track {
+  height: 3px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 2px;
+}
+
+input[type='range']::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: #7C3AED;
+  border-radius: 50%;
+  border: 2px solid #08080F;
+}
+
+/* Remove number input spinners */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* Toast slide-in animation */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Shimmer for loading */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, transparent 25%, rgba(255,255,255,0.04) 50%, transparent 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}

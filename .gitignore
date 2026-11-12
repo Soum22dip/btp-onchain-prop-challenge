@@ -1,0 +1,56 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build output
+dist/
+build/
+.next/
+out/
+.expo/
+.turbo/
+android/
+ios/
+*.tsbuildinfo
+
+# Anchor / Rust
+target/
+.anchor/
+test-ledger/
+
+# Environment files and secrets (the example file is the only one tracked)
+.env*
+!.env.example
+
+# Keypairs, wallets and keys
+*keypair*.json
+*wallet*.json
+id.json
+admin.json
+payout-vault.json
+*.pem
+*.key
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Tests and coverage
+coverage/
+
+# Backups and scratch files
+*.bak
+*.bak*
+*.orig
+*.old
+*.tmp
+*.swp
+
+# OS and editor files
+.DS_Store
+.vercel
+.idea/

@@ -1,0 +1,32 @@
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+Signer (vault admin / protocol): SL89fcsKAuWYtkEJah86WLLBxCiHd1DeNczpsDjSHDJ
+NOTE: transactions are real; trader results are SCRIPTED demo values, not live trading.
+
+Queued payouts: 14,800.00 USDC   heartbeat open=false
+    process_heartbeat_open
+      https://explorer.solana.com/tx/E5R6AaWD9TLRJjKvtD3RorKc8UQ6kckMZivMu9BenGoA4Nr8sqiBhLRU9Si7extqLN2iYaye4vcx6hMz6meV1YG?cluster=devnet
+    process_payout  demo-trader-1 phase 1
+      https://explorer.solana.com/tx/2qMAox22pXTbADrSsTFMPjmiaNhKMfZG5wNKZJBZ7GNzhG75vzSyUPqL9Fb4fqqnRFmGVohnemkpmX3ioUATLVmb?cluster=devnet
+    process_payout  demo-trader-2 phase 1
+      https://explorer.solana.com/tx/2Es683Cw6e7L1LYPUxAmTPErmMuR8HKpbaTFAaCzFuJGQKm3dmbvG2ycbuVsbsNHYbNJABCHR4AeeqmS9sX8gBHx?cluster=devnet
+    process_payout  demo-trader-3 phase 1
+      https://explorer.solana.com/tx/3BbHs7VLSKbvR7cdhegevhqwbjyqr3wSxzTzuLXXEMA3DTPosXJaqG9d3pxUWy85jwymQvVPbQ5zYys7YRea6cWB?cluster=devnet
+    process_payout  demo-trader-3 phase 2
+      https://explorer.solana.com/tx/5iiANUPkmEraJrTzYUJgdrHiF6Dnf8UYphdFBuz7z4WUEz1Hqe6k3TjLDrLxs9GMpBm2URMYN3HLbVa1KY4gCDM6?cluster=devnet
+    process_heartbeat_close
+      https://explorer.solana.com/tx/45tYuPprQgKGibYSGicHgLXUywdeNKqdhE6mBNEYHcXkFCetWN6QL4hGa7VTRAL344mx7xtAKCnzu8DDvj4hNK98?cluster=devnet
+
+== Test wallets (public addresses) ==
+  demo-trader-1  https://explorer.solana.com/address/HenwTh3ycBQNWBegJm6Q3pguEUdQ43ihmZ6RsYXF48FC?cluster=devnet
+    phase=Funded2 status=Active passed=2 failed=0 paid_out=800.00 deposited=99.00
+  demo-trader-2  https://explorer.solana.com/address/4gnTQGrAzzKG5o4kPSmcoLBH2uTxn3GsU5iVs4agbEo9?cluster=devnet
+    phase=Funded2 status=Active passed=2 failed=0 paid_out=2,000.00 deposited=235.00
+  demo-trader-3  https://explorer.solana.com/address/Ci6EjYaHqAT4bg8SD6j3nHGKdRDBcTko88HrN78Rxt4h?cluster=devnet
+    phase=Funded3 status=Active passed=3 failed=0 paid_out=12,000.00 deposited=599.00
+  demo-trader-4  https://explorer.solana.com/address/DdKvkqvssW5M8irzWUAJLNdiMpS1ArdcnPf1SgyGf6iB?cluster=devnet
+    phase=Evaluation status=Failed passed=0 failed=1 paid_out=0.00 deposited=99.00
+  demo-trader-5  https://explorer.solana.com/address/BPT5N3zmB7X8n9TnJctKHxwpgPzankHSrrNT4HxaMyvv?cluster=devnet
+    phase=Funded1 status=Active passed=1 failed=0 paid_out=0.00 deposited=235.00
+
+Vault: queued payouts 0.00 USDC, heartbeat open=false
+Next: pnpm exec tsx scripts/onchain-ledger.ts and scripts/onchain-check.ts for the full audit trail.

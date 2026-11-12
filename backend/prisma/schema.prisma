@@ -1,0 +1,379 @@
+// =============================================================================
+// Setl8 — Prisma Schema
+// Database: PostgreSQL 15
+// Matches TypeScript types in packages/types/src/index.ts exactly
+// =============================================================================
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ---------------------------------------------------------------------------
+// Enums
+// ---------------------------------------------------------------------------
+
+enum TraderStatus {
+  ACTIVE
+  BANNED
+  SUSPENDED
+}
+
+enum AttemptStatus {
+  ACTIVE
+  PASSED
+  FAILED
+  ABANDONED
+}
+
+enum AttemptPhase {
+  EVALUATION
+  FUNDED
+}
+
+enum TokenSymbol {
+  USDC
+  USDT
+  USD1
+}
+
+enum Market {
+  // Crypto (81)
+  BTC
+  ETH
+  SOL
+  BNB
+  XRP
+  DOGE
+  ADA
+  AVAX
+  LINK
+  DOT
+  LTC
+  BCH
+  UNI
+  ATOM
+  ETC
+  APT
+  OP
+  ARB
+  INJ
+  SUI
+  SEI
+  NEAR
+  FTM
+  MATIC
+  IMX
+  STX
+  RNDR
+  MKR
+  AAVE
+  CRV
+  SNX
+  LDO
+  COMP
+  RUNE
+  FIL
+  ICP
+  BLUR
+  PEPE
+  SHIB
+  BONK
+  FLOKI
+  WLD
+  DYDX
+  GMX
+  GRT
+  ENS
+  SUSHI
+  AXS
+  SAND
+  MANA
+  GALA
+  CHZ
+  APE
+  FET
+  THETA
+  EOS
+  XLM
+  XMR
+  ZEC
+  KSM
+  KAVA
+  ONE
+  CELO
+  EGLD
+  FLOW
+  ALGO
+  VET
+  IOTA
+  XTZ
+  ZIL
+  BAT
+  HNT
+  QNT
+  MASK
+  GNS
+  RPL
+  TON
+  TRX
+  CFX
+  PENDLE
+  TWT
+  // Commodities (4)
+  XAU
+  XAG
+  WTI
+  BRENT
+  // Indices (3)
+  SPY
+  QQQ
+  IWM
+  // Forex (10)
+  EUR_USD
+  GBP_USD
+  AUD_USD
+  NZD_USD
+  USD_JPY
+  USD_CAD
+  USD_CHF
+  USD_CNH
+  USD_SGD
+  USD_MXN
+}
+
+enum PositionSide {
+  LONG
+  SHORT
+}
+
+enum PositionStatus {
+  OPEN
+  CLOSED
+  LIQUIDATED
+}
+
+enum PayoutStatus {
+  PENDING
+  APPROVED
+  PROCESSING
+  COMPLETED
+  REJECTED
+}
+
+enum FraudFlag {
+  UNUSUAL_PNL
+  RAPID_OPEN_CLOSE
+  SUSPICIOUS_PATTERN
+  MULTIPLE_ACCOUNTS
+}
+
+// ---------------------------------------------------------------------------
+// Trader
+// ---------------------------------------------------------------------------
+
+model Trader {
+  id              String        @id @default(uuid())
+  walletAddress   String        @unique
+  status          TraderStatus  @default(ACTIVE)
+  fraudFlags      FraudFlag[]
+  telegramChatId  String?       @unique
+  telegramAlerts  Boolean       @default(true)
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  attempts         Attempt[]
+  positions        Position[]
+  payoutRequests   PayoutRequest[]
+  fraudFlagRecords FraudFlagRecord[]
+
+  @@index([walletAddress])
+  @@index([status])
+  @@map("traders")
+}
+
+// ---------------------------------------------------------------------------
+// Attempt
+// ---------------------------------------------------------------------------
+
+model Attempt {
+  id                String        @id @default(uuid())
+  traderId          String
+  attemptNumber     Int           // 1–7
+  phase             AttemptPhase
+  status            AttemptStatus @default(ACTIVE)
+  accountSize       Decimal       @db.Decimal(18, 6) // USD
+  startingBalance   Decimal       @db.Decimal(18, 6) // USD
+  currentBalance    Decimal       @db.Decimal(18, 6) // USD
+  peakBalance       Decimal       @db.Decimal(18, 6) // USD (for drawdown tracking)
+  profitTarget      Decimal       @db.Decimal(18, 6) // USD (startingBalance * 1.08)
+  maxDrawdownFloor  Decimal       @db.Decimal(18, 6) // USD (startingBalance * 0.92)
+  realizedPnl       Decimal       @db.Decimal(18, 6) @default(0)
+  unrealizedPnl     Decimal       @db.Decimal(18, 6) @default(0)
+  totalPayoutTaken  Decimal       @db.Decimal(18, 6) @default(0) // cumulative across this attempt
+  inTrailingMode    Boolean       @default(false)               // dynamic DD: trailing 4% mode
+  tradeStartBalance Decimal       @db.Decimal(20, 6) @default(0) // balance when current trade opened
+  tokenUsed         TokenSymbol
+  txSignature       String        // deposit tx on Solana
+  startedAt         DateTime
+  endedAt           DateTime?
+  createdAt         DateTime      @default(now())
+
+  trader            Trader        @relation(fields: [traderId], references: [id])
+  snapshots         AttemptSnapshot[]
+  positions         Position[]
+  payoutRequests    PayoutRequest[]
+
+  @@index([traderId])
+  @@index([traderId, status])
+  @@index([traderId, attemptNumber])
+  @@index([status])
+  @@map("attempts")
+}
+
+// ---------------------------------------------------------------------------
+// AttemptSnapshot
+// ---------------------------------------------------------------------------
+
+model AttemptSnapshot {
+  id              String    @id @default(uuid())
+  attemptId       String
+  balance         Decimal   @db.Decimal(18, 6)
+  pnlPercent      Decimal   @db.Decimal(10, 6)
+  drawdownPercent Decimal   @db.Decimal(10, 6)
+  snapshotAt      DateTime  // every 8 hours SGT (UTC+8)
+
+  attempt         Attempt   @relation(fields: [attemptId], references: [id])
+
+  @@index([attemptId])
+  @@index([attemptId, snapshotAt])
+  @@map("attempt_snapshots")
+}
+
+// ---------------------------------------------------------------------------
+// Position
+// ---------------------------------------------------------------------------
+
+model Position {
+  id              String          @id @default(uuid())
+  attemptId       String
+  traderId        String
+  market          Market
+  side            PositionSide
+  status          PositionStatus  @default(OPEN)
+  entryPrice      Decimal         @db.Decimal(18, 6)
+  exitPrice       Decimal?        @db.Decimal(18, 6)
+  size            Decimal         @db.Decimal(18, 6) // USD notional (original)
+  assetQuantity   Decimal         @db.Decimal(18, 8) @default(0) // e.g. 0.5 BTC
+  leverage        Decimal         @db.Decimal(8, 2)
+  marginUsed      Decimal         @db.Decimal(18, 6) // USD
+  openFee         Decimal         @db.Decimal(18, 6) @default(0)
+  closeFee        Decimal?        @db.Decimal(18, 6)
+  realizedPnl     Decimal?        @db.Decimal(18, 6) // set on close
+  unrealizedPnl   Decimal         @db.Decimal(18, 6) @default(0)
+  fundingPaid     Decimal         @db.Decimal(18, 6) @default(0)
+
+  // Stop loss & take profit
+  stopLoss        Decimal?        @db.Decimal(18, 6)
+  takeProfit      Decimal?        @db.Decimal(18, 6)
+
+  // Limit orders
+  orderType       String          @default("MARKET") // MARKET or LIMIT
+  limitPrice      Decimal?        @db.Decimal(18, 6)
+  orderStatus     String          @default("FILLED") // PENDING, FILLED, CANCELLED
+
+  // Partial exits
+  closedSize      Decimal         @db.Decimal(18, 6) @default(0)
+  remainingSize   Decimal         @db.Decimal(18, 6) @default(0)
+
+  // Close reason
+  closeReason     String?         // MANUAL, STOP_LOSS, TAKE_PROFIT, LIQUIDATION
+
+  openedAt        DateTime
+  closedAt        DateTime?
+
+  attempt         Attempt         @relation(fields: [attemptId], references: [id])
+  trader          Trader          @relation(fields: [traderId], references: [id])
+
+  @@index([attemptId])
+  @@index([traderId])
+  @@index([traderId, status])
+  @@index([attemptId, status])
+  @@index([attemptId, orderStatus])
+  @@map("positions")
+}
+
+// ---------------------------------------------------------------------------
+// PayoutRequest
+// ---------------------------------------------------------------------------
+
+model PayoutRequest {
+  id                  String        @id @default(uuid())
+  traderId            String
+  attemptId           String
+  walletAddress       String
+  amountUsd           Decimal       @db.Decimal(18, 6)
+  tokenSymbol         TokenSymbol
+  status              PayoutStatus  @default(PENDING)
+  batchId             String?
+  onchainTxSignature  String?
+  requestedAt         DateTime      @default(now())
+  processedAt         DateTime?
+
+  trader              Trader        @relation(fields: [traderId], references: [id])
+  attempt             Attempt       @relation(fields: [attemptId], references: [id])
+  batch               PayoutBatch?  @relation(fields: [batchId], references: [id])
+
+  @@index([traderId])
+  @@index([attemptId])
+  @@index([status])
+  @@index([batchId])
+  @@index([traderId, status])
+  @@map("payout_requests")
+}
+
+// ---------------------------------------------------------------------------
+// PayoutBatch
+// ---------------------------------------------------------------------------
+
+model PayoutBatch {
+  id               String          @id @default(uuid())
+  scheduledAt      DateTime
+  processedAt      DateTime?
+  totalRequests    Int             @default(0)
+  totalAmountUsd   Decimal         @db.Decimal(18, 6) @default(0)
+  adminTxSignature String?
+  successful       Int             @default(0)
+  failed           Int             @default(0)
+
+  payoutRequests   PayoutRequest[]
+
+  @@index([scheduledAt])
+  @@index([processedAt])
+  @@map("payout_batches")
+}
+
+// ---------------------------------------------------------------------------
+// FraudFlagRecord
+// (tracks individual fraud flag events per trader for audit trail)
+// ---------------------------------------------------------------------------
+
+model FraudFlagRecord {
+  id          String     @id @default(uuid())
+  traderId    String
+  flag        FraudFlag
+  notes       String     @default("")
+  flaggedAt   DateTime   @default(now())
+  flaggedBy   String     // admin wallet or "system"
+
+  trader      Trader     @relation(fields: [traderId], references: [id])
+
+  @@index([traderId])
+  @@index([flag])
+  @@index([flaggedAt])
+  @@map("fraud_flag_records")
+}

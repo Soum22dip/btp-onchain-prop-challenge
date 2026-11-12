@@ -1,0 +1,16 @@
+[package]
+edition = "2021"
+name = "proc-macro-crate"
+version = "3.5.0"
+authors = ["Bastian Köcher <git@kchr.de>"]
+description = "Replacement for crate (macro_rules keyword) in proc-macros"
+license = "MIT OR Apache-2.0"
+
+[lib]
+name = "proc_macro_crate"
+path = "src/lib.rs"
+
+[dependencies.toml_edit]
+version = "0.22.0"
+features = ["parse"]
+default-features = false

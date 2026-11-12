@@ -1,0 +1,70 @@
+Signer (vault admin / protocol): SL89fcsKAuWYtkEJah86WLLBxCiHd1DeNczpsDjSHDJ
+NOTE: transactions are real; trader results are SCRIPTED demo values, not live trading.
+
+== demo-trader-1  HenwTh3ycBQNWBegJm6Q3pguEUdQ43ihmZ6RsYXF48FC  (10,000.00 account, plan: pass + 1 funded pass(es))
+    fund 0.03 SOL for tx fees
+      https://explorer.solana.com/tx/5KFYkeu9dGEnSe8AUqVmJcm8GNEgTFfrVsi7PzSNDqj71NQPL3XmViEchjb7qvWo1D6c5wCMVpZvXKXL5FNHhiA?cluster=devnet
+    deposit_evaluation_fee 99 USDC (35% protocol / 65% vault)
+      https://explorer.solana.com/tx/4f5ZzFgc5HSeJDCuKzP8VyzEZZ1sQFqogw35oRMNEkE2S3s1jkhqK2qXbWf3PGYRPXmM7hSA9PJsAQ7EEVPrKMK6?cluster=devnet
+    submit_result_no_payout  evaluation PASSED  end 11,106.00 pnl 1,106.00 dd 248bps
+      https://explorer.solana.com/tx/2xgzeXoZfMA33qnrRFUkqAbLcztw1M3gbJ9erzTWK7io5B2SFrW2zFtndNASaC7mh4YMxMDvzwsuWC4JBYHxfpZL?cluster=devnet
+    submit_result_with_payout  funded phase 1 PASSED  payout queued 800.00 USDC
+      https://explorer.solana.com/tx/iKfwZLxs3WC15rjFiMXofpysMffvkTucsE6K2m8EpFUHGKuGyXQiQ48kNvuo6C4whoT559YYmu89jDz9estsS5R?cluster=devnet
+    done: 2 phase(s) passed
+
+== demo-trader-2  4gnTQGrAzzKG5o4kPSmcoLBH2uTxn3GsU5iVs4agbEo9  (25,000.00 account, plan: pass + 1 funded pass(es))
+    fund 0.03 SOL for tx fees
+      https://explorer.solana.com/tx/42gGYtc6r3XXqm4xRGNCANgrDf3GdC48jHZ21FG25vXjF1C2AyrWQxXJXdYRGbQ3B32SWEzwtsSeUzWgtpq58LHV?cluster=devnet
+    deposit_evaluation_fee 235 USDC (35% protocol / 65% vault)
+      https://explorer.solana.com/tx/5E7vq1K8ZiaRWgZRD5ogverCY9Xupr7b4pU13PZ4SiVpqNxyn97xYht4QWNNSHUiQSUEXZfQs4bmvfmQnUAgArsU?cluster=devnet
+    submit_result_no_payout  evaluation PASSED  end 27,662.50 pnl 2,662.50 dd 305bps
+      https://explorer.solana.com/tx/4LujgWcmgVjJDTbm7Q1mfG2qfDKFe5aQmKwhiKxziKzRG8jrt9YxLxncmUdZ9pLuwZKYfPQktJeuWFgTN7fq5UNY?cluster=devnet
+    submit_result_with_payout  funded phase 1 PASSED  payout queued 2,000.00 USDC
+      https://explorer.solana.com/tx/2SXWj6Ru64tu2YD849gXYcoV1pUmmaiZz8s8mKbYkuLvCYTfHTs8yeDYpJuhQ8guRTm772oUEFg8Uro63pXGyMmB?cluster=devnet
+    done: 2 phase(s) passed
+
+== demo-trader-3  Ci6EjYaHqAT4bg8SD6j3nHGKdRDBcTko88HrN78Rxt4h  (75,000.00 account, plan: pass + 2 funded pass(es))
+    fund 0.03 SOL for tx fees
+      https://explorer.solana.com/tx/2EBzT3wWY8Mq7SzwHSArJtDufjdaJNfsufgWeQ6s3n2aZ1RJ7bKZdg36q4g8Sj43FidnUDHcmAANZKaPxueMpt3k?cluster=devnet
+    deposit_evaluation_fee 599 USDC (35% protocol / 65% vault)
+      https://explorer.solana.com/tx/3MBszZDox5tgXWyFvo9RLMwYLn6w55SWqCaBknJRLDBuxyTDuZeUJSAor84n5kNz6AQ1U4JDJNxLZAKiLyFJBukZ?cluster=devnet
+    submit_result_no_payout  evaluation PASSED  end 82,680.00 pnl 7,680.00 dd 362bps
+      https://explorer.solana.com/tx/4H7VH2QviCAt2cuUMzQMQohtGJhc9Nmh1g6kQPkdXawxe9Biv7tqdeGnBx2xWW6Wvk1Tsqp8BAfTeDSMhp2hUfxY?cluster=devnet
+    submit_result_with_payout  funded phase 1 PASSED  payout queued 6,000.00 USDC
+      https://explorer.solana.com/tx/4Fce4ATd7KNgXFXRS1DJLRwdAveeoTPCd9aSA74ELc7oETSqj5itF2jEt91Z3zdjT5ERLpE6NiCVQ12NGcBCbrMX?cluster=devnet
+    submit_result_with_payout  funded phase 2 PASSED  payout queued 6,000.00 USDC
+      https://explorer.solana.com/tx/4ysShAPpP2Sd1TQehBNHvwKqcGU2qegzzadtbb1YV9EK72w1qbyrUp6YiKMsrpqDXBHL5qe7Tnm56f6ayfYHxD9L?cluster=devnet
+    done: 3 phase(s) passed
+
+== demo-trader-4  DdKvkqvssW5M8irzWUAJLNdiMpS1ArdcnPf1SgyGf6iB  (10,000.00 account, plan: fail)
+    fund 0.03 SOL for tx fees
+      https://explorer.solana.com/tx/3Df16uitUPasfWH9FdMkE735SC6AthpCu7y7Zi6soKkdquGwE8NHFpHfGgWSL9UeJQybZuc7NXJWFEvN6DDTmpNo?cluster=devnet
+    deposit_evaluation_fee 99 USDC (35% protocol / 65% vault)
+      https://explorer.solana.com/tx/5aPyC88ieCRUktpUjDh4aq6LJmwkE4V5UHavVXmh5WyzBmFfHNmihkj93VGC3WucZvQQ1BNfrDvkhqpYjsivKzyD?cluster=devnet
+    submit_result_no_payout  evaluation FAILED  end 9,189.00 pnl -811.00 dd 823bps
+      https://explorer.solana.com/tx/5wcJsd6mxVYFv2wJWyKJ5XD9ieHKuqUSUL7ZQ84jGMK7rY7rdpunbk2r8QeFWD8crwAnJn7tg2hqNCAq9UeisEbz?cluster=devnet
+
+== demo-trader-5  BPT5N3zmB7X8n9TnJctKHxwpgPzankHSrrNT4HxaMyvv  (25,000.00 account, plan: pass)
+    fund 0.03 SOL for tx fees
+      https://explorer.solana.com/tx/2GxddfHdbqSJG6aE3r6FTp27qXscew1xTxuED2LhXhpghVVwRA1GX7u5DjkrUJ6j8az9utmLaxwW5fdUKRjrNkBT?cluster=devnet
+    deposit_evaluation_fee 235 USDC (35% protocol / 65% vault)
+      https://explorer.solana.com/tx/Gx63Dfr4eZnkNRD38Me8zYFpr2LttDTm8wKdoMhaTycTZ4egyTL5JGRQdJagALfM2MgvEtMPie8aWgz8rc2oisH?cluster=devnet
+    submit_result_no_payout  evaluation PASSED  end 27,355.00 pnl 2,355.00 dd 246bps
+      https://explorer.solana.com/tx/2LY9dHk1NPeVzSxPQKPxXNJk5cykVfrPx7vE4RzQyJXFG5MkPpFuta4Hnx7Z21RfbJLo7w42ccDwPLwrc1JFCuv5?cluster=devnet
+    done: 1 phase(s) passed
+
+
+== Test wallets (public addresses) ==
+  demo-trader-1  https://explorer.solana.com/address/HenwTh3ycBQNWBegJm6Q3pguEUdQ43ihmZ6RsYXF48FC?cluster=devnet
+    phase=Funded2 status=Active passed=2 failed=0 paid_out=0.00 deposited=99.00
+  demo-trader-2  https://explorer.solana.com/address/4gnTQGrAzzKG5o4kPSmcoLBH2uTxn3GsU5iVs4agbEo9?cluster=devnet
+    phase=Funded2 status=Active passed=2 failed=0 paid_out=0.00 deposited=235.00
+  demo-trader-3  https://explorer.solana.com/address/Ci6EjYaHqAT4bg8SD6j3nHGKdRDBcTko88HrN78Rxt4h?cluster=devnet
+    phase=Funded3 status=Active passed=3 failed=0 paid_out=0.00 deposited=599.00
+  demo-trader-4  https://explorer.solana.com/address/DdKvkqvssW5M8irzWUAJLNdiMpS1ArdcnPf1SgyGf6iB?cluster=devnet
+    phase=Evaluation status=Failed passed=0 failed=1 paid_out=0.00 deposited=99.00
+  demo-trader-5  https://explorer.solana.com/address/BPT5N3zmB7X8n9TnJctKHxwpgPzankHSrrNT4HxaMyvv?cluster=devnet
+    phase=Funded1 status=Active passed=1 failed=0 paid_out=0.00 deposited=235.00
+
+Vault: queued payouts 14,800.00 USDC, heartbeat open=false
+Next: pnpm exec tsx scripts/onchain-ledger.ts and scripts/onchain-check.ts for the full audit trail.

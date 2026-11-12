@@ -1,0 +1,24 @@
+{
+  "name": "setl8",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "typecheck": "turbo typecheck",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "clean": "turbo clean && find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5",
+    "turbo": "^2.3.3",
+    "typescript": "^5.4.5",
+    "vitest": "^4.1.1"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=10.0.0"
+  },
+  "packageManager": "pnpm@10.30.3"
+}
